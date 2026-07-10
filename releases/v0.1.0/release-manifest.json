@@ -1,0 +1,30 @@
+{
+  "product": "Glance",
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "builtAtUtc": "2026-07-10T08:37:49.6366580Z",
+  "sourceRepository": "Stay-Umble/umble.tools.windows.glance",
+  "releaseRepository": "ben-umble/umble.tools.windows.glance",
+  "artifacts": [
+    {
+      "name": "Glance_0.1.0_x64_en-US.msi",
+      "sizeBytes": 6737920,
+      "sha256": "efc4a94fdcce6cb6acf7314cb135d29556dde7fd6c991979fa12eefcc6b58121"
+    },
+    {
+      "name": "Glance_0.1.0_x64-setup.exe",
+      "sizeBytes": 4777449,
+      "sha256": "af11eefad106f49cd768db29e0cbe53e44f6b9bd73946204420f2b4ee43f4175"
+    },
+    {
+      "name": "Glance-0.1.0-portable.exe",
+      "sizeBytes": 18703360,
+      "sha256": "ce0357703be43357b921c881f0b428276bee758e758ec55f14b086a74084a2e3"
+    },
+    {
+      "name": "GlanceCompanion-Android-0.1.0-debug.apk",
+      "sizeBytes": 1012556,
+      "sha256": "f84478b568cced87499df4246d46714c33eb63dc7e410726b8371ae9dd706ab2"
+    }
+  ]
+}

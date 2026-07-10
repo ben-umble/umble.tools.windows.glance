@@ -1,0 +1,5 @@
+efc4a94fdcce6cb6acf7314cb135d29556dde7fd6c991979fa12eefcc6b58121  Glance_0.1.0_x64_en-US.msi
+af11eefad106f49cd768db29e0cbe53e44f6b9bd73946204420f2b4ee43f4175  Glance_0.1.0_x64-setup.exe
+ce0357703be43357b921c881f0b428276bee758e758ec55f14b086a74084a2e3  Glance-0.1.0-portable.exe
+f84478b568cced87499df4246d46714c33eb63dc7e410726b8371ae9dd706ab2  GlanceCompanion-Android-0.1.0-debug.apk
+cebf129eb6294af5b8097cafdb0f2a0747ff69f484eb0ddc588efd7f827a12b9  release-manifest.json

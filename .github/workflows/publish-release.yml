@@ -1,0 +1,42 @@
+name: Publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release artifacts
+        uses: actions/checkout@v4
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          release_dir="releases/${TAG_NAME}"
+          notes_file="${release_dir}/RELEASE_NOTES.md"
+
+          if [ ! -d "${release_dir}" ]; then
+            echo "Release directory not found: ${release_dir}" >&2
+            exit 1
+          fi
+
+          if [ ! -f "${notes_file}" ]; then
+            echo "Release notes not found: ${notes_file}" >&2
+            exit 1
+          fi
+
+          mapfile -t assets < <(find "${release_dir}" -maxdepth 1 -type f ! -name "RELEASE_NOTES.md" | sort)
+          gh release create "${TAG_NAME}" "${assets[@]}" \
+            --title "Glance ${TAG_NAME}" \
+            --notes-file "${notes_file}" \
+            --prerelease \
+            --latest=false
